@@ -19,19 +19,31 @@ module.exports = {
     filename: 'js/[name].js'
   },
   // Loaders => son la funcionalidad que nos da Webpack para interpretar tipos de archivos no soportados de forma nativa por Javascript.
+  // respetar el orden en 'use:'
   module: {
-    rules: [{
-      // expresion regular que encontrará todos los .css en el proyecto
-      test: /\.css$/,
-      // respetar el orden en 'use'
-      // style-loader => para que podamos interpretar código .css
-      // css-loader => para que podamos inyectar con imports de js en un .css
-      // mini-css-extract-plugin => plugin para generar archivos .css
-      use: [{
-        // 'carga el loader' del plugin mini-css-extract-plugin
-        loader: MiniCSSExtractPlugin.loader
-      }, 'css-loader']
-    }]
+    rules: [
+      // soporte para javascript moderno
+      {
+        // expresion regular que encontrará todos los .css en el proyecto
+        test: /\.js$/,
+        // babel-loader => para interpretar codigo js de ultima generacion
+        use: ['babel-loader'],
+        // omitir node_modules (sino será un caos en performance)
+        exclude: /node_modules/
+      },
+      // soporte para css
+      {
+        // expresion regular que encontrará todos los .css en el proyecto
+        test: /\.css$/,
+        // style-loader => para que podamos interpretar código .css
+        // css-loader => para que podamos inyectar con imports de js en un .css
+        // mini-css-extract-plugin => plugin para generar archivos .css
+        use: [{
+          // 'carga el loader' del plugin mini-css-extract-plugin
+          loader: MiniCSSExtractPlugin.loader
+        }, 'css-loader']
+      }
+    ]
   },
   // Los Plugins sirven para extender las capacidades de webpack y dar más poder a los loaders.
   plugins: [
