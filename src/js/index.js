@@ -1,5 +1,5 @@
 import axios from 'axios'
-import '../css/index.css'
+import '../css/index.scss'
 
 const baseUrl = 'https://rickandmortyapi.com/api/'
 const characters = 'character/'

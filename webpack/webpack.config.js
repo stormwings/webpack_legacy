@@ -42,6 +42,18 @@ module.exports = {
           // 'carga el loader' del plugin mini-css-extract-plugin
           loader: MiniCSSExtractPlugin.loader
         }, 'css-loader']
+      },
+      // soporte para sass to css
+      {
+        test: /\.scss$/,
+        // style-loader => para que podamos interpretar código .css
+        // css-loader => para que podamos inyectar con imports de js en un .css
+        // sass-loader => plugin para leer archivos .sass .scss
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   },
