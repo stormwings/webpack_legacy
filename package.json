@@ -4,17 +4,15 @@
   "description": "configs de webpack",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config ./external/webpack.config.js",
-    "build:multientry": "webpack --config ./multiple/webpack.config.js",
-    "build:plugin": "webpack --config ./plugins/webpack.config.js -w"
+    "build:dev": "webpack --config ./webpack/webpack.config.js -w"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^3.0.0",
-    "mini-css-extract-plugin": "^0.7.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "css-loader": "3.0.0",
+    "mini-css-extract-plugin": "0.7.0",
+    "style-loader": "0.23.1",
+    "webpack": "4.35.3",
+    "webpack-cli": "3.3.5"
   }
 }
