@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/contact.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/contact.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/contact.js":
-/*!************************!*\
-  !*** ./src/contact.js ***!
-  \************************/
+/***/ "./src/js/contact.js":
+/*!***************************!*\
+  !*** ./src/js/contact.js ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('hola contact')\n\n//# sourceURL=webpack:///./src/contact.js?");
+eval("console.log('hola contact')\n\n//# sourceURL=webpack:///./src/js/contact.js?");
 
 /***/ })
 
