@@ -1,3 +1,3 @@
 import '../css/index.css'
 
-document.body.innerHTML = 'Holus desde webpack'
+document.body.innerHTML = 'hello webpack!'
