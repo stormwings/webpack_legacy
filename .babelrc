@@ -1,4 +1,12 @@
 {
+  "plugins": [
+    // plugin for async functions
+    ["@babel/plugin-transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
+  ],
   "presets": [
     "@babel/preset-env"
   ]
