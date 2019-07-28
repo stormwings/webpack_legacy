@@ -1,13 +1,19 @@
 {
-  "name": "webpack_app",
+  "name": "webpack",
   "version": "1.0.0",
-  "description": "configs de webpack",
+  "description": "webpack en javascript",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack --config ./webpack/webpack.config.js -w"
+    "start": "webpack --config ./webpack/webpack.config.dev.js -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack --config ./webpack/webpack.config.dev.js -w",
+    "build:prod": "webpack --config ./webpack/webpack.config.prod.js"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "webpack"
+  ],
+  "author": "@StormWings",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/plugin-transform-runtime": "^7.5.0",
@@ -15,10 +21,13 @@
     "@babel/runtime": "^7.5.4",
     "babel-loader": "^8.0.6",
     "css-loader": "3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^4.1.0",
     "mini-css-extract-plugin": "0.7.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "style-loader": "0.23.1",
+    "url-loader": "^2.1.0",
     "webpack": "4.35.3",
     "webpack-cli": "3.3.5"
   },

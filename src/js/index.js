@@ -1,5 +1,16 @@
 import axios from 'axios'
-import '../css/index.scss'
+import '../css/estilos.css';
+import '../css/teachers.scss';
+import jsonTeachers from './teachers';
+
+const {
+  teachers
+} = jsonTeachers;
+
+console.log(teachers)
+console.log('Hola mundo!, desde Webpack en un webpack.config');
+
+//
 
 const baseUrl = 'https://rickandmortyapi.com/api/'
 const characters = 'character/'
