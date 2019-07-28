@@ -8,9 +8,9 @@ const {
 } = jsonTeachers;
 
 console.log(teachers)
-console.log('Hola mundo!, desde Webpack en un webpack.config');
+console.log('Hola mundo!, desde Webpack!');
 
-//
+// async functions (es2015)
 
 const baseUrl = 'https://rickandmortyapi.com/api/'
 const characters = 'character/'
