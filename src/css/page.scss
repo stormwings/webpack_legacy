@@ -6,8 +6,39 @@
 @import "./../global/functions";
 
 body {
-  background-color: $colorBlueDark;
   font-family: $roboto-regular;
+}
+
+#navbar {
+  .header {
+    height: 75px;
+    color: $colorWhite;
+    background-color: $colorBlack;
+    font-family: $roboto-regular;
+
+    &__container {
+      max-width: 1000px;
+      width: 100%;
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      &__element {
+
+        &__text {
+          font-size: 20px;
+          text-decoration: none;
+          height: 75px; // pending sass
+          line-height: 75px; // pending sass
+          color: $colorBlueLight;
+        }
+      }
+    }
+  }
 }
 
 #panel_one {
