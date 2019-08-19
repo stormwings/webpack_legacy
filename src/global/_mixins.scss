@@ -1,0 +1,11 @@
+// MIXINS (called with 'include')
+
+// basic mixin
+@mixin align_center_width {
+  margin: 0 auto;
+}
+
+// mixin with variables
+@mixin button_default_width($default_width: 800px) {
+  width: $default_width;
+}
