@@ -3,6 +3,7 @@
 @import "./../global/fonts";
 @import "./../global/mixins";
 @import "./../global/layouts";
+@import "./../global/functions";
 
 body {
   background-color: $colorBlueDark;
@@ -17,11 +18,16 @@ body {
   }
 
   .tab {
+    background-color: $colorBlueLight;
+    // __functions
+    padding: sum(10px, 5px);
 
     &__buttons {
+      // __mixins
       @include align_center_width;
 
       .button {
+        // __layouts
         @extend %button_layout;
         width: 150px;
 
@@ -34,11 +40,17 @@ body {
         }
 
         &__big {
+          // __mixins
           @include button_default_width(175px);
+          // __function
+          font-size: map-get($font_size, normal);
         }
 
         &__little {
-          @include button_default_width(300px);
+          // __mixins
+          @include button_default_width(100px);
+          // __function
+          font-size: map-get($font_size, small);
         }
       }
     }
