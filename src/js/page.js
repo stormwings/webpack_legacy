@@ -1,14 +1,7 @@
 import axios from 'axios'
-import '../css/estilos.css';
-import '../css/teachers.scss';
-import jsonTeachers from './teachers';
+import './../css/page.scss';
 
-const {
-  teachers
-} = jsonTeachers;
-
-console.log(teachers)
-console.log('Hola mundo!, desde Webpack!');
+console.log('Hello World from Webpack!');
 
 // async functions (es2015)
 
