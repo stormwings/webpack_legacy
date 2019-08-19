@@ -9,4 +9,20 @@ body {
 
 #panel_one {
   background: $colorBlue;
+
+  p {
+    font-size: 50px;
+  }
+
+  .button {
+    width: 50px;
+
+    &__success {
+      color: blue;
+    }
+
+    &__danger {
+      color: red;
+    }
+  }
 }
