@@ -9,8 +9,8 @@ body {
   font-family: $roboto-regular;
 }
 
-#navbar {
-  .header {
+#nav {
+  .navbar {
     height: 75px;
     color: $colorWhite;
     background-color: $colorBlack;
@@ -43,45 +43,78 @@ body {
 
 #panel_one {
   background: $colorBlue;
+  width: 500px;
 
-  p {
-    font-size: 50px;
-  }
+  article {
+    margin: 20px;
 
-  .tab {
-    background-color: $colorBlueLight;
-    // __functions
-    padding: sum(10px, 5px);
+    .image__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
 
-    &__buttons {
-      // __mixins
-      @include align_center_width;
+      .image {
+        max-width: 85%;
+      }
+    }
 
-      .button {
-        // __layouts
-        @extend %button_layout;
-        width: 150px;
+    .date__container {
+      a {
+        font-size: .7em;
+      }
+    }
 
-        &__success {
-          color: blue;
-        }
+    .autor__container {
+      a {
+        font-size: 1em;
+      }
+    }
 
-        &__danger {
-          color: red;
-        }
+    .description__container {
+      &__text {
+        text-align: center;
+        margin: 0px;
+        padding: 15px;
+        font-size: 15px;
+      }
+    }
 
-        &__big {
-          // __mixins
-          @include button_default_width(175px);
-          // __function
-          font-size: map-get($font_size, normal);
-        }
+    .tab {
+      background-color: $colorBlueLight;
+      // __functions
+      padding: sum(10px, 5px);
 
-        &__little {
-          // __mixins
-          @include button_default_width(100px);
-          // __function
-          font-size: map-get($font_size, small);
+      &__buttons {
+        // __mixins
+        @include align_center_width;
+
+        .button {
+          // __layouts
+          @extend %button_layout;
+          width: 150px;
+
+          &__success {
+            color: blue;
+          }
+
+          &__danger {
+            color: red;
+          }
+
+          &__big {
+            // __mixins
+            @include button_default_width(175px);
+            // __function
+            font-size: map-get($font_size, normal);
+          }
+
+          &__little {
+            // __mixins
+            @include button_default_width(100px);
+            // __function
+            font-size: map-get($font_size, small);
+          }
         }
       }
     }
