@@ -1,77 +1,8 @@
-// ROBOTO FONT FACE'S
+// FONTS
 
-// Roboto Thin 100
-@font-face {
-  font-family: 'robotothin';
-  src: url('./../fonts/Roboto-Thin-webfont.eot');
-  src: url('./../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
-    url('./../fonts/Roboto-Thin-webfont.woff2') format('woff2'),
-    url('./../fonts/Roboto-Thin-webfont.woff') format('woff'),
-    url('./../fonts/Roboto-Thin-webfont.ttf') format('truetype'),
-    url('./../fonts/Roboto-Thin-webfont.svg#robotothin') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Roboto Light 300
-@font-face {
-  font-family: 'robotolight';
-  src: url('./../fonts/Roboto-Light-webfont.eot');
-  src: url('./../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('./../fonts/Roboto-Light-webfont.woff2') format('woff2'),
-    url('./../fonts/Roboto-Light-webfont.woff') format('woff'),
-    url('./../fonts/Roboto-Light-webfont.ttf') format('truetype'),
-    url('./../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Roboto Regular 400
-@font-face {
-  font-family: 'robotoregular';
-  src: url('./../fonts/Roboto-Regular-webfont.eot');
-  src: url('./../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('./../fonts/Roboto-Regular-webfont.woff2') format('woff2'),
-    url('./../fonts/Roboto-Regular-webfont.woff') format('woff'),
-    url('./../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
-    url('./../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Roboto Medium 500
-@font-face {
-  font-family: 'robotomedium';
-  src: url('./../fonts/Roboto-Medium-webfont.eot');
-  src: url('./../fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-    url('./../fonts/Roboto-Medium-webfont.woff2') format('woff2'),
-    url('./../fonts/Roboto-Medium-webfont.woff') format('woff'),
-    url('./../fonts/Roboto-Medium-webfont.ttf') format('truetype'),
-    url('./../fonts/Roboto-Medium-webfont.svg#robotomedium') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-// Roboto Thin 100
-$roboto-thin: 'robotothin',
-Helvetica,
-Arial,
+// Nunito
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap');
+$nunito: 'Nunito',
 sans-serif;
 
-// Roboto Light 300
-$roboto-light: 'robotolight',
-Helvetica,
-Arial,
-sans-serif;
-
-// Roboto Regular 400
-$roboto-regular: 'robotoregular',
-Helvetica,
-Arial,
-sans-serif;
-
-// Roboto Medium 500
-$roboto-medium: 'robotomedium',
-Helvetica,
-Arial,
-sans-serif;
+$times: 'times-new-roman';

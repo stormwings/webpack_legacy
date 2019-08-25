@@ -6,7 +6,9 @@
 @import "./../global/functions";
 
 body {
-  font-family: $roboto-regular;
+  font-family: $nunito;
+  font-weight: 400;
+  background-color: $colorBackground;
 }
 
 html {
@@ -29,7 +31,6 @@ nav {
 main {
   width: 91%;
   margin: 0 auto;
-  background-color: aquamarine;
 }
 
 section {
@@ -37,7 +38,6 @@ section {
 }
 
 #section_one {
-  background-color: antiquewhite;
   height: 30px;
   display: flex;
   flex-direction: row;
@@ -47,12 +47,12 @@ section {
     height: 100%;
     max-width: 30%;
 
-
     &__text {
       color: $colorBlack;
       text-decoration: none;
       font-size: 0.8em;
-      padding-top: 5px;
+      padding-top: 6%;
+      margin: 0px;
     }
   }
 
@@ -64,84 +64,90 @@ section {
     width: 70%;
 
     &__image {
+      border-radius: 40%;
       height: 100%;
     }
   }
 }
 
 #section_two {
-  background-color: rgb(218, 111, 143);
   height: 30px;
 
-  .search-form {
-    position: relative;
-    top: 50%;
-    left: 50%;
+  .search__form {
     width: 100%;
     height: 100%;
-    border-radius: 40px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     background: #fff;
+    position: relative;
+    border-radius: 40px;
+    transform: translate(-50%, -50%);
+    -webkit-box-shadow: 0px 1px 12px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 12px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 12px -6px rgba(0, 0, 0, 0.75);
     transition: all 0.3s ease;
 
+    // improve
     &.focus {
       box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
     }
-  }
 
-  .search-input {
-    position: absolute;
-    top: 3px;
-    left: 38px;
-    font-size: 14px;
-    color: #5a6674;
-    width: 75%;
-    height: 75%;
-    border: none;
-    appearance: none;
-    outline: none;
+    &__input {
+      position: absolute;
+      top: 3px;
+      left: 38px;
+      font-size: 14px;
+      color: #5a6674;
+      width: 85%;
+      height: 75%;
+      border: none;
+      outline: none;
 
-    &::-webkit-search-cancel-button {
-      appearance: none;
+      &::-webkit-search-cancel-button {
+        appearance: none;
+      }
     }
-  }
 
-  .search-button {
-    position: absolute;
-    top: 7px;
-    left: 15px;
-    height: 20px;
-    width: 20px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-    outline: none !important;
-    cursor: pointer;
-
-    & svg {
-      width: 20px;
+    &__button {
+      position: absolute;
+      top: 7px;
+      left: 15px;
       height: 20px;
-      fill: #5a6674;
+      width: 20px;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+      outline: none !important;
+      cursor: pointer;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #5a6674;
+      }
     }
   }
 }
 
 #section_tree {
-  background-color: blueviolet;
   height: 155px;
 
   .category__header {
     height: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     &__title {
+      font-size: 2em;
+      font-family: $times;
+      font-weight: 400;
       margin: 0px;
     }
 
     &__subtitle {
-      color: rgba(240, 240, 240, 0.767);
+      color: $colorGrayDark;
+      margin: 0px;
+      font-size: 0.7em;
     }
   }
 
@@ -156,8 +162,11 @@ section {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      background-color: #fff;
+      background-color: $colorWhite;
       border-radius: 10px;
+      -webkit-box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.75);
 
       &__image {
         height: 50%;
