@@ -5,7 +5,8 @@
   margin: 0 auto;
 }
 
-// mixin with variables
-@mixin button_default_width($default_width: 800px) {
-  width: $default_width;
+@mixin flex_parent_center_height() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

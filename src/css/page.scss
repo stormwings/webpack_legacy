@@ -1,9 +1,9 @@
-@import "./../global/normalize";
-@import "./../global/variables";
-@import "./../global/fonts";
-@import "./../global/mixins";
-@import "./../global/layouts";
-@import "./../global/functions";
+@import './../global/normalize';
+@import './../global/variables';
+@import './../global/fonts';
+@import './../global/mixins';
+@import './../global/layouts';
+@import './../global/functions';
 
 body {
   font-family: $nunito;
@@ -30,7 +30,7 @@ nav {
 
 main {
   width: 91%;
-  margin: 0 auto;
+  @include align_center_width();
 }
 
 section {
@@ -159,7 +159,7 @@ section {
 //     &__article {
 //       width: 22%;
 //       height: 100%;
-//       margin: 0 auto;
+//       @include align_center_width();
 //       display: flex;
 //       flex-direction: column;
 //       background-color: $colorWhite;
@@ -219,7 +219,7 @@ section {
 //     &__article {
 //       width: 28%;
 //       height: 100%;
-//       margin: 0 auto;
+//       @include align_center_width();
 //       display: flex;
 //       flex-direction: column;
 //       background-color: $colorWhite;
@@ -428,7 +428,6 @@ section {
 //     }
 //   }
 
-
 //   .search__result__list {
 //     display: flex;
 //     flex-wrap: wrap;
@@ -589,30 +588,150 @@ section {
       }
     }
   }
+}
 
+#section_ten {
   .article__action {
-    height: 50px;
+    height: 60px;
     width: 100%;
     display: flex;
     background-color: $colorWhite;
+    text-align: center;
     border-radius: 15px;
     -webkit-box-shadow: 0px 0px 30px -17px $colorBlack;
     -moz-box-shadow: 0px 0px 30px -17px $colorBlack;
     box-shadow: 0px 0px 30px -17px $colorBlack;
 
-    &__type {
+    &__feature {
+      @include flex_parent_center_height();
+      width: 30%;
+      height: 100%;
+
+      .title-mini {
+        margin: 0 auto;
+        width: 50%;
+        height: 80%;
+        border-radius: 25px;
+        background-color: $colorPink;
+        color: $colorWhite;
+        @include flex_parent_center_height();
+      }
+    }
+
+    &__delivery {
+      @include flex_parent_center_height();
+      color: $colorPink;
+      width: 35%;
+      height: 100%;
+    }
+
+    &__time {
+      @include flex_parent_center_height();
+      color: $colorPink;
+      width: 35%;
+      height: 100%;
+
+      .button-mini {
+        margin: 0 auto;
+        width: 65%;
+        height: 60%;
+        border: 2px solid $colorPink;
+        border-radius: 25px;
+        color: $colorPink;
+        @include flex_parent_center_height();
+      }
+    }
+  }
+}
+
+#section_eleven {
+  .comments__header {
+    margin-bottom: 9px;
+
+    &__title {
+      margin: 0px;
+      font-weight: 500;
+    }
+  }
+
+  .comments__list {
+    &__article {
+      &__header {
+        display: flex;
+
+        &__image {
+          width: 15%;
+          border-radius: 40%;
+          height: 50px;
+        }
+
+        &__name {
+          width: 70%;
+          padding-left: 20px;
+          padding-top: 2%;
+
+          &__title {}
+
+          &__stars {
+            &__star {
+              width: 15px;
+            }
+          }
+        }
+
+        &__date {
+          width: 25%;
+          padding-top: 3%;
+        }
+      }
+
+      &__description {
+        p {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+#section_twelve {
+  .article__action {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    background-color: $colorWhite;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 30px -17px $colorBlack;
+    -moz-box-shadow: 0px 0px 30px -17px $colorBlack;
+    box-shadow: 0px 0px 30px -17px $colorBlack;
+
+    &__price {
+      color: $colorPink;
+      @include flex_parent_center_height();
+      width: 40%;
+      height: 100%;
+    }
+
+    &__cuantity {
+      color: $colorPink;
+      @include flex_parent_center_height();
       width: 20%;
       height: 100%;
     }
 
-    &__name {
-      width: 50%;
-      height: 100%;
-    }
-
     &__button {
-      width: 30%;
-      height: 100%;
+      margin: auto;
+      width: 16%;
+      height: 65%;
+      border-radius: 25px;
+      background-color: $colorPink;
+      color: $colorWhite;
+      @include flex_parent_center_height();
+
+      img {
+        height: 65%;
+      }
     }
   }
 }
