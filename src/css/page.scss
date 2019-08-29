@@ -713,11 +713,21 @@ section {
       height: 100%;
     }
 
-    &__cuantity {
-      color: $colorPink;
+    &__time {
       @include flex_parent_center_height();
-      width: 20%;
+      color: $colorPink;
+      width: 35%;
       height: 100%;
+
+      .button-mini {
+        margin: 0 auto;
+        width: 65%;
+        height: 60%;
+        border: 2px solid $colorPink;
+        border-radius: 25px;
+        color: $colorPink;
+        @include flex_parent_center_height();
+      }
     }
 
     &__button {
