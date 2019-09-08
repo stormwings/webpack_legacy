@@ -120,3 +120,16 @@ body {
     }
   }
 }
+
+@mixin margin_up_down($margin-top, $margin-bottom) {
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+}
+
+@for $i from 1 through 8 {
+  $margin: 5px * $i;
+
+  .margin-#{$i} {
+    @include margin_up_down($margin, $margin);
+  }
+}
