@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Homepage</title>
+    <meta name="description" content="My description" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Homepage</title>
-  <meta name="description" content="My description" />
-</head>
+  <body>
+    <main class="main">
+      <section class="section" id="panel_one">
+        <article>
+          <div class="image__container">
+            <img class="image" src="http://lorempixel.com/1000/500/sports/" alt="image" />
+          </div>
+          <div class="autor__container">
+            <a href="">Mariano Villarreal</a>
+          </div>
+          <div class="date__container">
+            <a href="">18-05-2019</a>
+          </div>
+          <div class="description__container">
+            <p class="description__container__text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque quaerat, voluptas harum eaque iusto fuga,
+              dicta odio ipsam maiores totam deserunt! Nostrum exercitationem aspernatur adipisci amet repellendus, nam
+              laboriosam quaerat!
+            </p>
+          </div>
+          <div class="tab tab__buttons">
+            <button class="button button__danger button__big">Aceptar</button>
+            <button class="button button__success button__little">Cancelar</button>
+          </div>
+        </article>
+      </section>
 
-<body>
-  <main class="main">
-    <nav id="nav">
-      <div class="navbar">
-        <ul class="navbar__container">
-          <li class="navbar__container__element"><a class="navbar__container__element__text" href="#">Home</a></li>
-          <li class="navbar__container__element"><a class="navbar__container__element__text" href="#">Portfolio</a></li>
-          <li class="navbar__container__element"><a class="navbar__container__element__text" href="#">Experience</a>
-          </li>
-          <li class="navbar__container__element"><a class="navbar__container__element__text" href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+      <!-- Form Example -->
 
-    <section class="section" id="panel_one">
-      <article>
-        <div class="image__container">
-          <img class="image" src="http://lorempixel.com/1000/500/sports/" alt="image">
-        </div>
-        <div class="autor__container">
-          <a href="">Mariano Villarreal</a>
-        </div>
-        <div class="date__container">
-          <a href="">18-05-2019</a>
-        </div>
-        <div class="description__container">
-          <p class="description__container__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
-            quaerat, voluptas harum eaque iusto fuga,
-            dicta odio ipsam maiores totam deserunt! Nostrum exercitationem aspernatur adipisci amet repellendus, nam
-            laboriosam quaerat!</p>
-        </div>
-        <div class="tab tab__buttons">
-          <button class="button button__danger button__big">Aceptar</button>
-          <button class="button button__success button__little">Cancelar</button>
-        </div>
-      </article>
-    </section>
-  </main>
-</body>
+      <section class="section" id="panel_two">
+        <form action="" id="form">
+          <input type="text" name="name" />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
 
+      <!-- Swiper Example -->
+
+      <section>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </section>
+
+      <!-- Lottie Example -->
+
+      <div id="bm"></div>
+    </main>
+  </body>
 </html>

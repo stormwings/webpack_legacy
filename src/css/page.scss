@@ -1,44 +1,30 @@
-@import "./../global/normalize";
-@import "./../global/variables";
-@import "./../global/fonts";
-@import "./../global/mixins";
-@import "./../global/layouts";
-@import "./../global/functions";
+@import './../global/normalize';
+@import './../global/variables';
+@import './../global/fonts';
+@import './../global/mixins';
+@import './../global/layouts';
+@import './../global/functions';
 
 body {
   font-family: $roboto-regular;
 }
 
-#nav {
-  .navbar {
-    height: 75px;
-    color: $colorWhite;
-    background-color: $colorBlack;
-    font-family: $roboto-regular;
+// swiper style
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
 
-    &__container {
-      max-width: 1000px;
-      width: 100%;
-      height: 100%;
-      padding: 0px;
-      margin: 0px;
-      list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: $colorBlueLight;
+}
 
-      &__element {
-
-        &__text {
-          font-size: 20px;
-          text-decoration: none;
-          height: 75px; // pending sass
-          line-height: 75px; // pending sass
-          color: $colorBlueLight;
-        }
-      }
-    }
-  }
+// lottie style
+#bm {
+  width: 400px;
+  height: 400px;
 }
 
 #panel_one {
@@ -61,7 +47,7 @@ body {
 
     .date__container {
       a {
-        font-size: .7em;
+        font-size: 0.7em;
       }
     }
 
@@ -87,7 +73,7 @@ body {
 
       &__buttons {
         // __mixins
-        @include align_center_width;
+        @include align-center-width;
 
         .button {
           // __layouts
@@ -104,14 +90,14 @@ body {
 
           &__big {
             // __mixins
-            @include button_default_width(175px);
+            @include button-default-width(175px);
             // __function
             font-size: map-get($font_size, normal);
           }
 
           &__little {
             // __mixins
-            @include button_default_width(100px);
+            @include button-default-width(100px);
             // __function
             font-size: map-get($font_size, small);
           }

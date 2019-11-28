@@ -6,7 +6,7 @@ const path = require('path');
 
 // HELPERS
 
-// helper to iterate all the "css/scss" in different folders
+// helper to iterate "css/scss" in different folders
 function recursiveIssuer(m) {
   if (m.issuer) {
     return recursiveIssuer(m.issuer);
@@ -20,30 +20,30 @@ function recursiveIssuer(m) {
 // WEBPACK CONFIGS
 
 module.exports = {
-  // Initial => sets the initial configs to your application
   mode: 'production',
   entry: {
-    page: path.resolve(__dirname, '../src/js/page.js'),
-    modal: path.resolve(__dirname, '../src/js/modal.js'),
+    index: path.resolve(__dirname, '../src/js/index.js')
   },
-  // Loaders => allow webpack to process other types of files to use in your application.
+  // Loaders => allow to process other types of files.
   module: {
     rules: [
-      // This loader allows transpiling JavaScript files using Babel. To use the latest javascript version.
+      // To use the latest javascript version.
       {
         test: /\.js$/,
         use: ['babel-loader'],
         exclude: /node_modules/
       },
-      // This loader and plugin extracts CSS/SASS/CSS into separate files. It creates a CSS file per JS file which contains CSS.
+      // This loader and plugin extracts CSS/SASS/CSS into separate files.
+      // It creates a CSS file per JS file which contains CSS.
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [{
+        use: [
+          {
             loader: MiniCssExtractPlugin.loader
           },
           'css-loader',
-          'sass-loader',
-        ],
+          'sass-loader'
+        ]
       },
       // A loader for webpack which transforms files into base64 URIs.
       {
@@ -56,27 +56,32 @@ module.exports = {
           }
         }
       },
-      // The file-loader resolves "import/require()" on a file into a url and emits the file into the output directory.
+      // The file-loader resolves "import/require()" on a file into a url
+      // Emits the file into the output directory.
       {
         test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'vendor/fonts/'
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'vendor/fonts/'
+            }
           }
-        }]
+        ]
       }
     ]
   },
   // Plugins => extends webpack and loaders capacities.
   plugins: [
-    new CopyPlugin([{
-      from: './src/assets',
-      to: './assets'
-    }, ]),
+    new CopyPlugin([
+      {
+        from: './src/assets',
+        to: './assets'
+      }
+    ]),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].css'
     }),
     new HTMLWebpackPlugin({
       title: 'Homepage',
@@ -90,29 +95,21 @@ module.exports = {
       new UglifyJsPlugin({
         uglifyOptions: {
           output: {
-            comments: false,
-          },
-        },
+            comments: false
+          }
+        }
       })
     ],
     splitChunks: {
       cacheGroups: {
         // add optimization for each webpack entry config
-        pageStyles: {
-          name: 'page',
-          test: (m, c, entry = 'page') =>
-            m.constructor.name === 'ScssModule' && recursiveIssuer(m) === entry,
+        indexStyles: {
+          name: 'index',
+          test: (m, c, entry = 'index') => m.constructor.name === 'ScssModule' && recursiveIssuer(m) === entry,
           chunks: 'all',
-          enforce: true,
-        },
-        modalStyles: {
-          name: 'modal',
-          test: (m, c, entry = 'modal') =>
-            m.constructor.name === 'ScssModule' && recursiveIssuer(m) === entry,
-          chunks: 'all',
-          enforce: true,
-        },
-      },
-    },
+          enforce: true
+        }
+      }
+    }
   }
-}
+};

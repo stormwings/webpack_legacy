@@ -1,11 +1,61 @@
-// MIXINS (called with 'include')
-
-// basic mixin
-@mixin align_center_width {
+@mixin align-center-width {
   margin: 0 auto;
 }
 
-// mixin with variables
-@mixin button_default_width($default_width: 800px) {
+@mixin button-default-width($default_width: 800px) {
   width: $default_width;
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -ms-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin transition($transition) {
+  transition: $transition;
+  -o-transition: $transition;
+  -moz-transition: $transition;
+  -webkit-transition: $transition;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  transform: $transform;
+}
+
+@mixin box-shadow($shadow) {
+  box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+}
+
+@mixin blur($blur) {
+  -webkit-filter: blur($blur);
+  -moz-filter: blur($blur);
+  -o-filter: blur($blur);
+  -ms-filter: blur($blur);
+  filter: blur($blur);
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {
+    @content;
+  }
+
+  ::-moz-placeholder {
+    @content;
+  }
+
+  :-ms-input-placeholder {
+    @content;
+  }
 }

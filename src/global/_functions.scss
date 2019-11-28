@@ -2,12 +2,13 @@
 
 // basic sum function
 @function sum($number-one, $number-two) {
-  @return $number-one+$number-two;
+  @return $number-one + $number-two;
 }
 
 // font sizes function
-$font_size : (big: 24px,
+$font_size: (
+  big: 24px,
   normal: 24px,
   small: 12px,
-  tiny: 8px,
-)
+  tiny: 8px
+);
