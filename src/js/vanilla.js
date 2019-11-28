@@ -41,6 +41,21 @@ $element_id.append($html.body.children[0]);
 // $element_id.classList.toggle('active'); // add or remove
 // $element_id.style.border = '10px solid red';
 
+// SIMULATING components (2 examples)
+
+const text = () => {
+  document.body.innerHTML = '<p>mariano</p>';
+};
+
+// function render(data) {
+//   const $element = document.createElement('img');
+//   $element.setAttribute('src', data.imageUrl);
+//   // now must show it in the browser display (to end body's)
+//   document.body.append($element);
+// }
+// // * some fetch
+// render(data);
+
 // CREATE elements and attributes assignation
 
 function setAtributes($element, attributes) {
