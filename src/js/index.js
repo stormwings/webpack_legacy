@@ -1,6 +1,11 @@
 import './../css/page.scss';
-import './swiper';
+
+// panel one two and three sections
+// import './swiper';
+// import './lottie';
+// import './jquery';
+// import './vanilla';
+
+// panel three four and five
+import './callback';
 import './axios';
-import './lottie';
-import './jquery';
-import './vanilla';
