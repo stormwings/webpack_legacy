@@ -65,6 +65,92 @@
       <!-- Lottie Example -->
 
       <!-- <div id="bm"></div> -->
+
+      <!-- <div id="panel_four">
+        <div id="element"></div>
+        like async but execute to end 
+        <script defer src="js/jstags/jstags.js"></script>
+        load while document is loading, then execute when is full loaded 
+        <script async src="js/jstags/jstags2.js"></script>
+        stop navigator then continue when finish 
+        <script src="js/jstags/jstags3.js"></script>
+      </div> -->
+
+      <!-- Scope -->
+      <!-- El contexto en el que los valores y las expresiones son "visibles". 
+        Si una variable u otra expresión no está "en el Scope- alcance actual", 
+        entonces no está disponible para su uso -->
+
+      <!-- var declara una variable de scope global o local para la función sin importar el ámbito de bloque.
+        var puede ser actualizado si se usa en otra function ya que es global.
+
+        let declara una variable de scope global, local para la función o de bloque. Es reasignable
+
+        function explainLet() {
+          let a = 10;
+          console.log(a); // output 10
+          if (true) {
+            let a = 20;
+            console.log(a); // output 20
+          }
+          console.log(a); // output 10
+        }
+
+        const es igual que let pero, No es reasignable (es inmutable), pero es mutable. -->
+      <script>
+        // Global scope
+        // var message = 'Hello, global scope!';
+        // var $ = function(message) {
+        //   console.log('Say: ' + message);
+        // };
+        // // var inside function
+        // function exampleFunction() {
+        //   var x = 'declarada dentro de la función'; // x solo se puede utilizar en exampleFunction
+        //   console.log(x);
+        // }
+
+        // console.log(x); // error
+
+        // // Function scope (bad)
+        // function printNumbers() {
+        //   for (var number = 0; number < 10; number++) {
+        // // muestra 10 en todos  por que termina de recorrer antes del timeout
+        //     setTimeout(function() {
+        //       console.log(number);
+        //     }, 100);
+        //   }
+        // }
+
+        // Function Scope (good)
+        // function printNumbers() {
+        //   var i;
+        //   for (i = 0; i < 10; i++) {
+        //     // muestra correctamente el recorrido por q son scopes distintos
+        //     // printnumbers & eventuallyPrintNumber != scope
+        //     function eventuallyPrintNumber(n) {
+        //       setTimeout(function() {
+        //         console.log(n);
+        //       }, 100);
+        //     }
+
+        //     eventuallyPrintNumber(i);
+        //   }
+        // }
+
+        // Block scope
+
+        // // Function scope (new)
+        function printNumbers() {
+          for (let number = 0; number < 10; number++) {
+            // "let" opera sobre el block scope (la function donde esta posicionado)
+            setTimeout(function() {
+              console.log(number);
+            }, 100);
+          }
+        }
+
+        printNumbers();
+      </script>
     </main>
   </body>
 </html>

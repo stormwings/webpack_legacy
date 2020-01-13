@@ -6,6 +6,6 @@ import './../css/page.scss';
 // import './jquery';
 // import './vanilla';
 
-// panel three four and five
-import './callback';
-import './axios';
+// console only
+// import './callback';
+// import './axios';
