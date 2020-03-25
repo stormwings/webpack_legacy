@@ -1,3 +1,11 @@
+// Falsy values in Javascript
+//   false
+//   0
+//   null
+//   ""
+//   undefined
+//   NaN
+
 // Switch
 let signo = prompt('Cual es tu signo?')
 
