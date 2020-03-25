@@ -35,30 +35,33 @@ const somethingWillHappen2 = () => {
 // how to consume the promise
 // call the function
 somethingWillHappen
-  .then(function(msn) { 
+  .then(function (msn) {
     // when promise works correctly
   })
-  .catch(function(msn) {
+  .catch(function (msn) {
     // when promise fails
+  })
+  .finally(function (msn) {
+    // when promise finish
   })
 
 // how to consume many promises at the same time
 // el then se ejecutan cuando terminen todas las promesas.
 // el catch se ejecuta en el primer error.
 Promise.all([
-  somethingWillHappen,
-  somethingWillHappen2
-])
-.then(function() {})
-.catch(function() {})
+    somethingWillHappen,
+    somethingWillHappen2
+  ])
+  .then(function () {})
+  .catch(function () {})
 
 // it executes the first promise on finish
 Promise.race([
-  somethingWillHappen,
-  somethingWillHappen2
-])
-.then(function() {})
-.catch(function() {})
+    somethingWillHappen,
+    somethingWillHappen2
+  ])
+  .then(function () {})
+  .catch(function () {})
 
 // FETCH (replaces ajax in ES2015)
 //   Es una funcion para inicializar peticiones asíncronas.
@@ -70,35 +73,39 @@ Promise.race([
 //   Body => Nos ayuda a declarar cual será el contenido y como manejarlo (Works in Request & Response)
 
 fetch("url") // example: an api to get a random user
-  .then(function(response) {
+  .then(function (response) {
     // on success, show on console and return as json
     console.log(response)
     return response.json()
   })
-  .catch(function() {
+  .catch(function () {
     // on error, show message
     console.log('something went wrong')
   })
 
 // Real Example
 var url = 'https://example.com/profile';
-var data = { username: 'example' };
+var data = {
+  username: 'example'
+};
 
 fetch(url, {
-  method: 'POST', // method
-  body: JSON.stringify(data),
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
-.then(res => res.json())
-.catch(error => console.error('Error:', error))
-.then(response => console.log('Success:', response));
+    method: 'POST', // method
+    body: JSON.stringify(data),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .catch(error => console.error('Error:', error))
+  .then(response => console.log('Success:', response));
 
 // Real Example (AXIOS)
 const fetchApi = async mode => {
   let result;
-  await axios.get(`${baseUrl}${mode}`).then(({ data }) => {
+  await axios.get(`${baseUrl}${mode}`).then(({
+    data
+  }) => {
     result = data;
   });
   return result;
@@ -149,7 +156,7 @@ const episodes = `${baseUrl}episode/`;
 const locations = `${baseUrl}location/`;
 
 const asyncFetch = async () => {
-// multiple 'await' and 'try/catch solves callback hell
+  // multiple 'await' and 'try/catch solves callback hell
   try {
     const episodesList = await fetchGetData(episodes);
     const locationsList = await fetchGetData(locations);
@@ -185,7 +192,7 @@ foo();
 // función dentro de "()" => la ejecuta cuando el navegador carga
 const urlApi = 'https://yts.am/api/v2/list_movies.json?genre=';
 
-(async function load () {
+(async function load() {
   async function getData(url) {
     const response = await fetch(url);
     const response_json = await response.json();
