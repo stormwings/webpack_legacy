@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Homepage</title>
-    <meta name="description" content="My description" />
-  </head>
 
-  <body>
-    <main class="main">
-      <!-- <section class="section" id="panel_one">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Homepage</title>
+  <meta name="description" content="My description" />
+</head>
+
+<body>
+  <main class="main">
+    <!-- SPA -->
+    <header class="Header" id="Header">
+    </header>
+    <section id="content">
+      <div class="loading"></div>
+    </section>
+    <!-- SPA -->
+    <!-- <section class="section" id="panel_one">
         <article>
           <div class="image__container">
             <img class="image" src="http://lorempixel.com/1000/500/sports/" alt="image" />
@@ -35,18 +43,18 @@
         </article>
       </section> -->
 
-      <!-- Form Example -->
+    <!-- Form Example -->
 
-      <!-- <section class="section" id="panel_two">
+    <!-- <section class="section" id="panel_two">
         <form action="" id="form">
           <input type="text" name="name" />
           <button type="submit">Submit</button>
         </form>
       </section> -->
 
-      <!-- Swiper Example -->
+    <!-- Swiper Example -->
 
-      <!-- <section>
+    <!-- <section>
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">Slide 1</div>
@@ -62,11 +70,11 @@
         </div>
       </section> -->
 
-      <!-- Lottie Example -->
+    <!-- Lottie Example -->
 
-      <!-- <div id="bm"></div> -->
+    <!-- <div id="bm"></div> -->
 
-      <!-- <div id="panel_four">
+    <!-- <div id="panel_four">
         <div id="element"></div>
         like async but execute to end 
         <script defer src="js/jstags/jstags.js"></script>
@@ -76,12 +84,12 @@
         <script src="js/jstags/jstags3.js"></script>
       </div> -->
 
-      <!-- Scope -->
-      <!-- El contexto en el que los valores y las expresiones son "visibles". 
+    <!-- Scope -->
+    <!-- El contexto en el que los valores y las expresiones son "visibles". 
         Si una variable u otra expresión no está "en el Scope- alcance actual", 
         entonces no está disponible para su uso -->
 
-      <!-- var declara una variable de scope global o local para la función sin importar el ámbito de bloque.
+    <!-- var declara una variable de scope global o local para la función sin importar el ámbito de bloque.
         var puede ser actualizado si se usa en otra function ya que es global.
 
         let declara una variable de scope global, local para la función o de bloque. Es reasignable
@@ -97,60 +105,61 @@
         }
 
         const es igual que let pero, No es reasignable (es inmutable), pero es mutable. -->
-      <script>
-        // Global scope
-        // var message = 'Hello, global scope!';
-        // var $ = function(message) {
-        //   console.log('Say: ' + message);
-        // };
-        // // var inside function
-        // function exampleFunction() {
-        //   var x = 'declarada dentro de la función'; // x solo se puede utilizar en exampleFunction
-        //   console.log(x);
-        // }
+    <script>
+      // Global scope
+      // var message = 'Hello, global scope!';
+      // var $ = function(message) {
+      //   console.log('Say: ' + message);
+      // };
+      // // var inside function
+      // function exampleFunction() {
+      //   var x = 'declarada dentro de la función'; // x solo se puede utilizar en exampleFunction
+      //   console.log(x);
+      // }
 
-        // console.log(x); // error
+      // console.log(x); // error
 
-        // // Function scope (bad)
-        // function printNumbers() {
-        //   for (var number = 0; number < 10; number++) {
-        // // muestra 10 en todos  por que termina de recorrer antes del timeout
-        //     setTimeout(function() {
-        //       console.log(number);
-        //     }, 100);
-        //   }
-        // }
+      // // Function scope (bad)
+      // function printNumbers() {
+      //   for (var number = 0; number < 10; number++) {
+      // // muestra 10 en todos  por que termina de recorrer antes del timeout
+      //     setTimeout(function() {
+      //       console.log(number);
+      //     }, 100);
+      //   }
+      // }
 
-        // Function Scope (good)
-        // function printNumbers() {
-        //   var i;
-        //   for (i = 0; i < 10; i++) {
-        //     // muestra correctamente el recorrido por q son scopes distintos
-        //     // printnumbers & eventuallyPrintNumber != scope
-        //     function eventuallyPrintNumber(n) {
-        //       setTimeout(function() {
-        //         console.log(n);
-        //       }, 100);
-        //     }
+      // Function Scope (good)
+      // function printNumbers() {
+      //   var i;
+      //   for (i = 0; i < 10; i++) {
+      //     // muestra correctamente el recorrido por q son scopes distintos
+      //     // printnumbers & eventuallyPrintNumber != scope
+      //     function eventuallyPrintNumber(n) {
+      //       setTimeout(function() {
+      //         console.log(n);
+      //       }, 100);
+      //     }
 
-        //     eventuallyPrintNumber(i);
-        //   }
-        // }
+      //     eventuallyPrintNumber(i);
+      //   }
+      // }
 
-        // Block scope
+      // Block scope
 
-        // // Function scope (new)
-        function printNumbers() {
-          for (let number = 0; number < 10; number++) {
-            // "let" opera sobre el block scope (la function donde esta posicionado)
-            setTimeout(function() {
-              console.log(number);
-            }, 100);
-          }
-        }
+      // // Function scope (new)
+      // function printNumbers() {
+      //   for (let number = 0; number < 10; number++) {
+      //     // "let" opera sobre el block scope (la function donde esta posicionado)
+      //     setTimeout(function() {
+      //       console.log(number);
+      //     }, 100);
+      //   }
+      // }
 
-        printNumbers();
-      </script>
-    </main>
-  </body>
+      // printNumbers();
+    </script>
+  </main>
+</body>
+
 </html>

@@ -1,4 +1,4 @@
-import './../css/page.scss';
+// import './../css/page.scss';
 
 // panel one two and three sections
 // import './swiper';
@@ -9,3 +9,6 @@ import './../css/page.scss';
 // console only
 // import './callback';
 // import './axios';
+
+// spa vanilla
+import app from './../app';
