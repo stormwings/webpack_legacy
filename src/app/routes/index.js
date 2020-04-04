@@ -1,7 +1,7 @@
 import Header from './../templates/Header';
-import Character from './../pages/Character';
-import Home from './../pages/Home';
-import Error404 from './../pages/404';
+import Character from '../components/Character';
+import Home from '../components/Home';
+import Error404 from '../components/404';
 
 import {
   getHash,
