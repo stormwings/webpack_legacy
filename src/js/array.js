@@ -62,3 +62,15 @@ const reducer = (acum, { cantidadDeLibros }) => acum + cantidadDeLibros;
 var totalDeLibros = persona.reduce(reducer, 0);
 
 console.log(`El total de libros leidos es: ${totalDeLibros}`);
+
+// SUM OF ARRAY ITEMS
+
+const lineA = 5
+const lineB = [1000000001, 1000000002, 1000000003, 1000000004, 1000000005]
+
+const fun = item => typeof item === 'object'
+  ? item.reduce((sum, item) => sum += item)
+  : undefined
+
+console.log(fun(lineA))
+console.log(fun(lineB))

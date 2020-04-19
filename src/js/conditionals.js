@@ -33,3 +33,22 @@ do {
 
 console.log(result);
 // expected result: "12345"
+
+// compare triples (check who wins in points)
+
+const ana = [17, 28, 30]
+const bob = [99, 16, 8]
+
+let i = 0
+let result = [0, 0]
+
+while (i < 3) {
+  if (ana[i] > bob[i]) {
+    result[0]++
+  } else if (ana[i] < bob[i]) {
+    result[1]++
+  }
+  i++
+}
+
+// console.log(result)
