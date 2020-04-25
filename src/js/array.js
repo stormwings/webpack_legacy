@@ -74,3 +74,79 @@ const fun = item => typeof item === 'object'
 
 console.log(fun(lineA))
 console.log(fun(lineB))
+
+// MATRIX EDGES
+
+let arr = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16]
+]
+
+const highItem = matrix => {
+  let value = 0
+  matrix.forEach((row, i) => {
+    row.forEach((element, j) => {
+      if (i === j) {
+        value += element
+      }
+    })
+  });
+
+  return value
+}
+
+const lowItem = matrix => {
+  const size = matrix.length - 1
+  let value = 0
+
+  let i = 0
+  while (i <= size) {
+    value += matrix[size - i][i]
+    i++
+  }
+
+  return value
+}
+
+const getModule = number => number < 0 ? number * (-1) : number
+
+const sumX = highItem(arr)
+const sumY = lowItem(arr)
+
+console.log(getModule(sumX - sumY))
+
+// factions of positive, negative and zeros
+
+const arr = [1, 1, 0, -1, -1]
+const length = arr.length
+let result = []
+
+let sumPositives = 0
+let sumNegatives = 0
+let sumZeros = 0
+
+arr.forEach(element => {
+  switch (true) {
+    case (element > 0):
+      sumPositives++
+      break;
+    case (element < 0):
+      sumNegatives++
+      break;
+    default:
+      sumZeros++
+      break;
+  }
+});
+
+const positives = sumPositives / length
+const negatives = sumNegatives / length
+const zeros = sumZeros / length
+
+result.push(positives.toFixed(6))
+result.push(negatives.toFixed(6))
+result.push(zeros.toFixed(6))
+
+console.log(result)
