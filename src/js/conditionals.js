@@ -52,3 +52,23 @@ while (i < 3) {
 }
 
 // console.log(result)
+
+// FIBONACCI WITH #
+
+let value = ""
+const sumArray = item => item += "#"
+const fillSpaces = (string, max) => {
+  let sum = string
+  while (sum.length !== max) {
+    sum = ` ${sum}`
+  }
+  console.log(sum)
+}
+
+const n = 6
+
+for (let index = 0; index < n; index++) {
+  value = sumArray(value)
+  // console.log(value)
+  fillSpaces(value, n)
+}

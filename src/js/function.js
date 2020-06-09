@@ -34,3 +34,28 @@ function showName(people) {
   var { name } = people
   console.log(name.toUpperCase())
 }
+
+// Pure functions
+// Is pure function when returns the same result each execution
+// New Dates cant be pure functions, or async
+const double = x => x * 2
+console.log(double(2)) // get 4 ever
+console.log(double(2)) // get 4 ever
+console.log(double(2)) // get 4 ever
+
+// Using pure functions using immutability
+// is important the pure functions be the most immutable posible, there
+// are two examples using immutable and mmutable pure functions
+
+// not immutable
+const addToList = (list, item, quantity) => {
+  list.push({ item, quantity })
+  return list
+}
+
+// immutable
+const addToList = (list, item, quantity) => {
+  const newList = JSON.parse(JSON.stringify(list))
+  newList.push({ item, quantity })
+  return newList
+}

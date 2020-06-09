@@ -1,3 +1,9 @@
+// Variables Storage
+
+// Types => Stack and Heap
+// Stack: store all common variables and Heap pointers (pill similar)
+// Heap: store the objects in the memory (matrix A1, B2, C3.. etc. similar)
+
 // Scope
 
 // Global Scope
