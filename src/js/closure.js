@@ -1,3 +1,6 @@
+// Los closures son funciones que retornan otra funcion
+// ademas permiten conservar el scope de las variables al momento que son declaradas
+
 // simple example
 function buildSum(base) {
   return function(value) {
