@@ -102,3 +102,37 @@ cloneCountry.capital.name = "Copenhagen"
 cloneCountry.capital.population = 600000
 console.log(country, cloneCountry)
 // It changes in both object completly because are full different objects!
+
+// Other example with Object.assign
+
+// bad
+
+const a = { value: 2 }
+
+const addOne = () => a.value += 1 // modifies the global object state
+const timesTwo = () => a.value *= 2 // modifies the global object state
+
+// you can uncomment the second block and get different value in global object 
+// addOne()
+// timesTwo()
+// console.log(a.value)
+
+timesTwo()
+addOne()
+console.log(a.value)
+
+// good
+
+const b = { value: 2 }
+
+const addOnePure = b => Object.assign({}, b, { value: b.value + 1 }) // pure function mode
+const timesTwoPure = b => Object.assign({}, b, { value: b.value * 2 }) // pure function mode
+
+// you can use both blocks and global object dont was modified. And pure function works correctly
+addOnePure(b)
+timesTwoPure(b)
+console.log(b.value)
+
+// timesTwoPure(b)
+// addOnePure(b)
+// console.log(b.value)
