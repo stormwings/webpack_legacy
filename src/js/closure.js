@@ -1,3 +1,37 @@
+// simple example
+function buildSum(base) {
+  return function(value) {
+    return base + value
+  }
+}
+
+const addFive = buildSum(0)
+console.log(addFive(10))
+
+// using ECS5 example
+const buildRest = base => value => base - value
+
+const restFive = buildRest(10)
+console.log(restFive(3))
+
+// closure currying
+
+// without currying
+function sumThreeNumber(a, b, c) {
+  return a + b + c
+}
+console.log(sumThreeNumber(1, 2, 3))
+
+// with currying
+function sumThreeNumber(a) {
+  return function(b) {
+    return function(c) {
+      return a + b + c
+    }
+  }
+}
+console.log(sumThreeNumber(1)(2)(3)) // 6
+
 // Not a closure (only console.log)
 // const moneyBox = coins => {
 //   var saveCoins = 0;
