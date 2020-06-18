@@ -1,29 +1,49 @@
-// Variables Storage
-
-// Types => Stack and Heap
-// Stack: store all common variables and Heap pointers (pill similar)
-// Heap: store the objects in the memory (matrix A1, B2, C3.. etc. similar)
+// Variable Storage (Stack and Heap)
+//  + Stack: store all common variables and Heap pointers (pill similar)
+//  + Heap: store the 'objects' in the memory (looks like matrix A1, B2, C3.. etc. similar)
 
 // Scope
+//  Determines the visibility of a variable. How far you can access a variable within your code.
+
+// Local Scope
+//  Existe cuando las variables necesarias son declaradas dentro de una función de JavaScript. 
+//  Las variables locales tienen “alcance de función” y solamente se puede acceder dentro de la función.
+//  El alcance local puede ser dividido en alcance de función y alcance de bloque.
+
+// Ejemplo
+// Cómo puedes ver, el código es bastante explicativo. 
+// Si declaras catName dentro de tu función getAge(), 
+// no podrás usarla fuera de la función, por eso se dice que su scope es local.
+
+// aqui no se puede usar catAge
+function getAge() {
+  var catAge = "Tarecas"
+  // aqui se puede usar catAge
+}
 
 // Global Scope
-// var => classic javascript's (variable with global scope)
-var global = 'test';
+//  Las variables son creadas fuera de la función tienen un alcance global.
+//  Puedes alterar su valor desde cualquier parte de tu código, respetando la pila de llamadas.
+var global = 'nothing here';
 
 function anotherFunction() {
-  global = 'test2';
-  console.log(global); // test2 because reasigned in global scope
+  global = 'global variable';
+  console.log(global); // return 'global variable' because reasigned in global scope
 };
 
 anotherFunction();
-console.log(global); // test2 because reasigned in global scope
+console.log(global); // return 'global variable' because reasigned in global scope
 
-// Local Scope
-// let => javascript's variable with block scope
-// const => innmutable variable with block scope (object can change keys)
-// limitando su alcance al bloque, declaración, o expresión donde se está usando.
-// no se pueden redeclarar/reasignar
-// tambien corrige errores en los iteradores
+// Block Scope
+//  Un alcance de bloque es la sección dentro de las condiciones if, switch,
+//  o dentro de métodos de iteración com while.
+//  limitando su alcance al bloque, declaración, o expresión donde se está usando.
+//  no se pueden redeclarar/reasignar
+//  tambien corrige errores en los iteradores (donde se usan los closures)
+
+//  let => javascript's variable with block scope
+//  const => innmutable variable with block scope (object can change keys)
+
 let world = 'world';
 const helloWorld = 'hello world';
 
