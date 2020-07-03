@@ -136,3 +136,20 @@ console.log(b.value)
 // timesTwoPure(b)
 // addOnePure(b)
 // console.log(b.value)
+
+// PROTOTYPE
+function Hero(name) {
+  // this = Object.create(Hero.prototype);
+  this.name = name;
+  // return this;
+}
+
+Hero.prototype.saludar = function() {
+  console.log(`New: ${this.name}`);
+};
+
+const zelda = new Hero('Zelda');
+zelda.saludar();
+
+const link = new Hero('Link');
+link.saludar();
