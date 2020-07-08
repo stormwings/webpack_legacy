@@ -153,3 +153,22 @@ zelda.saludar();
 
 const link = new Hero('Link');
 link.saludar();
+
+// GETTERS & SETTERS
+const player = {
+  sound: {
+    muted: false,
+  },
+  get muted() {
+    return this.sound.muted
+  },
+  set muted(value) {
+    if (value === true) {
+      this.sound.muted = value
+    }
+  }
+}
+if (!player.muted) {
+  player.muted = true
+}
+console.log(player)
